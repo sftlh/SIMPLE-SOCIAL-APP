@@ -43,10 +43,14 @@ const FriendRequestList = ({requests}:{requests:RequestWithUser[]}) => {
                 </div>
                 <div className='flex gap-4 justify-end'>
                     <form action={()=> accept(request.id, request.sender.id)}>
-                        <Image src="/accept.png" alt="" width={20} height={20} className='cursor-pointer'/>
+                        <button>
+                            <Image src="/accept.png" alt="" width={20} height={20} className='cursor-pointer'/>
+                        </button>
                     </form>
                     <form action={()=> decline(request.id, request.sender.id)}>
-                        <Image src="/reject.png" alt="" width={20} height={20} className='cursor-pointer'/>
+                        <button>
+                            <Image src="/reject.png" alt="" width={20} height={20} className='cursor-pointer'/>
+                        </button>
                     </form>
                 </div>
             </div>
